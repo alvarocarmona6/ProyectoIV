@@ -1,4 +1,8 @@
-# ProyectoIV
+[![Build Status](https://travis-ci.org/alvarocarmona6/ProyectoIV.svg?branch=master)](https://travis-ci.org/alvarocarmona6/ProyectoIV)
+
+
+
+# ProyectoIV 
 
 # Bot NBA
 
