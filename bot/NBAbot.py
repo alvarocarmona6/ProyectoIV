@@ -20,7 +20,7 @@ bot.set_update_listener(listener)
 def hola(m): 
 	
 	cid = m.chat.id 
-	mensaje= fun.Clasificacion()
+	mensaje= fun.Saludo()
 	bot.send_message( cid, mensaje)
 
 
