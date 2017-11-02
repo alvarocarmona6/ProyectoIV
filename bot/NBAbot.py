@@ -5,7 +5,8 @@ import time # Libreria para hacer que el programa que controla el bot no se acab
 import funciones as fun
 import os
 
-bot = telebot.TeleBot("420201411:AAEOSUZRDddSvFdqTsWNipk5Aj2IKRYzkz4")
+TOKEN = os.environ['TOKEN']
+bot = telebot.TeleBot(TOKEN)
 
 def listener(messages): # Con esto, estamos definiendo una funcion llamada 'listener', que recibe como parametro un dato llamado 'messages'.
 	for m in messages: # Por cada dato 'm' en el dato 'messages'
