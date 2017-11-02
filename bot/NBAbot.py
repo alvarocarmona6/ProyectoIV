@@ -2,7 +2,7 @@ import telebot
 from telebot import types 
 from telebot import util
 import time # Libreria para hacer que el programa que controla el bot no se acabe.
-import ObtenerClasificacion as fun
+import funciones as fun
 import os
 
 bot = telebot.TeleBot("420201411:AAEOSUZRDddSvFdqTsWNipk5Aj2IKRYzkz4")
