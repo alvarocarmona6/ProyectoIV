@@ -16,21 +16,13 @@ def listener(messages):
 
 bot.set_update_listener(listener)
 
-@bot.message_handler(commands=['hola']) 
-def hola(m): #
-	
-	cid = m.chat.id # Guardamos el ID de la conversacion para poder responder.
-	mensaje= "Hola este bot te informará sobre la NBA, escribe /clasificacion para ver la clasificacion actual de la NBA, gracias :) "
-	bot.send_message( cid, mensaje)
 
-
-bot.set_update_listener(listener)
 
 
 @bot.message_handler(commands=['clasificacion']) 
-def clasificacion(m): # Definimos una funcion que resuelva lo que necesitemos.
+def clasificacion(m):
 	
-	cid = m.chat.id # Guardamos el ID de la conversacion para poder responder.
+	cid = m.chat.id
 	mensaje= fun.Clasificacion()
 	bot.send_message( cid, mensaje)
 
