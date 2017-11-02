@@ -16,16 +16,18 @@ def Clasificacion():
 
         nombres= patron.findall(str(puesto))
 
-
-        print("Conferencia Este:\n")
+        mensaje = ""
+        mensaje = mensaje +"\nConferencia Este:\n"
         for x in range(len(nombres)):
                 if(x == 15):
-                        print("Conferencia Oeste:\n")
-                        print "En el puesto " + str(x-14) + " esta "+ nombres[x]
+                        mensaje = mensaje +"\nConferencia Oeste:\n"
+                        mensaje = mensaje +  "\nEn el puesto " + str(x-14) + " esta "+ nombres[x]
                 elif(x>15):
-                        print "En el puesto " + str(x-14) + " esta "+ nombres[x]
+                        mensaje = mensaje + "\nEn el puesto " + str(x-14) + " esta "+ nombres[x]
 
                 else:
-                        print "En el puesto " + str(x+1) + " esta "+ nombres[x]
+                        mensaje = mensaje +  "\nEn el puesto " + str(x+1) + " esta "+ nombres[x]
+
+        return mensaje
 
 	
