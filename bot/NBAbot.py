@@ -20,7 +20,7 @@ bot.set_update_listener(listener)
 def hola(m): 
 	
 	cid = m.chat.id 
-	mensaje= "Hola este bot te informará sobre la NBA, escribe /clasificacion para ver la clasificacion actual de la NBA, gracias :) "
+	mensaje= fun.Clasificacion()
 	bot.send_message( cid, mensaje)
 
 
