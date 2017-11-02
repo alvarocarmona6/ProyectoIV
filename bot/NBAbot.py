@@ -2,7 +2,7 @@ import telebot
 from telebot import types 
 from telebot import util
 import time # Libreria para hacer que el programa que controla el bot no se acabe.
-
+from fun import ObtenerClasificacion
 import os
 
 bot = telebot.TeleBot("420201411:AAEOSUZRDddSvFdqTsWNipk5Aj2IKRYzkz4")
@@ -19,7 +19,7 @@ bot.set_update_listener(listener)
 def clasificacion(m): # Definimos una funcion que resuelva lo que necesitemos.
 	
 	cid = m.chat.id # Guardamos el ID de la conversacion para poder responder.
-	mensaje="Prueba de clasificacion de bot"
+	mensaje= fun.Clasificacion()
 	bot.send_message( cid, mensaje)
 
 
