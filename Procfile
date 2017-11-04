@@ -1,1 +1,2 @@
-worker: cd bot  && python NBAbot.py 
+worker: cd bot  && python NBAbot.py
+web: gunicorn web:app --log-file=-
