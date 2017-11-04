@@ -27,6 +27,16 @@ def hola(m):
 
 bot.set_update_listener(listener)
 
+@bot.message_handler(commands=['mejorjugador']) 
+def mejorjugador(m): 
+	
+        
+	cid = m.chat.id 
+	mensaje= fun.MejorJugador()
+	bot.send_message( cid, mensaje)
+
+
+bot.set_update_listener(listener)
 
 
 
