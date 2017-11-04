@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import html5lib
 import re
-
+import datos 
 
 lista_jugadores_puntos = {'Curry': 25 , 'Lebron' : 15, 'Harden': 10}
 clasificacion_equipo = {'Cavaliers': 1 , 'Bulls' : 5 , 'Celtics' : 3 , 'Hornets' : 8 } 
@@ -29,6 +29,13 @@ def Saludo():
 
         mensaje = "Hola este bot te informara sobre la NBA, escribe /clasificacion para ver la clasificacion actual de la NBA, gracias :) "
 
+        return mensaje
+
+
+def MejorJugador():
+
+        lista = datos.mostrar_jugador()
+        mensaje = "El mejor jugador es " + lista[0]
         return mensaje
 
 
