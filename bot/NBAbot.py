@@ -3,6 +3,7 @@ from telebot import types
 from telebot import util
 import time 
 import funciones as fun
+import funcionesdatos as fundatos
 import os
 
 TOKEN = os.environ['TOKEN']
@@ -32,7 +33,7 @@ def mejorjugador(m):
 	
         
 	cid = m.chat.id 
-	mensaje= fun.MejorJugador()
+	mensaje= fundatos.MejorJugador()
 	bot.send_message( cid, mensaje)
 
 
