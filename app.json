@@ -1,6 +1,6 @@
 {
   "name": "NBABOT para Telegram",
-  "description": "Bot para dar informacion sobre la NBA",
+  "description": "Bot para dar informacion sobre la NBA, clasificaciones mejores jugadores etc..",
   "repository": "https://github.com/alvarocarmona6/ProyectoIV",
   "logo": "https://cdn.nba.net/nba-drupal-prod/2017-08/SEO-image-NBA-logoman.jpg",
   "keywords": ["python", "nbaivbot"]
