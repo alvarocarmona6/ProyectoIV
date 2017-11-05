@@ -4,7 +4,7 @@ import html5lib
 import re 
 
 lista_jugadores_puntos = {'Curry': 25 , 'Lebron' : 15, 'Harden': 10}
-clasificacion_equipo = {'Cavalier': 1 , 'Bulls' : 5 , 'Celtics' : 3 , 'Hornets' : 8 } 
+clasificacion_equipo = {'Cavaliers': 1 , 'Bulls' : 5 , 'Celtics' : 3 , 'Hornets' : 8 } 
 
 
 def ObtenerPuntosJugadores(jugador):
