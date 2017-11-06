@@ -26,7 +26,7 @@ def ObtenerClasificacion():
 
 def Saludo():
 
-        mensaje = "Hola este bot te informara sobre la NBA, escribe /clasificacion o /mejorjugador para ver la clasificacion actual de la NBA, gracias :) "
+        mensaje = "Hola este bot te informara sobre la NBA, escribe /clasificacion para ver la clasificacion actual de la NBA  o /mejorjugador para ver el mejor jugador  , gracias :) "
 
         return mensaje
 
