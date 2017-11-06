@@ -28,3 +28,7 @@ En primer lugar instalamos [**Heroku CLI**](https://devcenter.heroku.com/article
 ```bash
 $ wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 ```
+
+Luego nos damos de alta en la aplicación [**Heroku**](https://signup.heroku.com/?c=70130000001x9jEAAQ). Una vez reguistrado creamos nuestra app la mia se llama nbaivbot 
+
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/capturanbaivbot.png)
