@@ -32,3 +32,8 @@ $ wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 Luego nos damos de alta en la aplicación [**Heroku**](https://signup.heroku.com/?c=70130000001x9jEAAQ). Una vez reguistrado creamos nuestra app la mia se llama nbaivbot 
 
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/capturanbaivbot.png)
+
+Enlazamos nuestro repositorio GitHub con Heroku, y lo configuramos para que cuando hagamos un push en GitHub y haya pasado los test de TravisCI se despliegue automaticamente.
+
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/configuracionheroku.png)
+
