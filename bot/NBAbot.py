@@ -47,8 +47,8 @@ bot.set_update_listener(listener)
 def clasificacion(m):
 	
 	cid = m.chat.id
-	mensaje= fun.Clasificacion()
-	bot.send_message( cid, mensaje)
+	mensaje2= fun.Clasificacion()
+	bot.send_message( cid, mensaje2)
 
 
 bot.set_update_listener(listener)
