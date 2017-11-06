@@ -33,8 +33,8 @@ def mejorjugador(m):
 	
         
 	cid = m.chat.id 
-	mensaje= fundatos.MejorJugador()
-	bot.send_message( cid, mensaje)
+	mensaje2= fundatos.MejorJugador()
+	bot.send_message( cid, mensaje2)
 
 
 bot.set_update_listener(listener)
