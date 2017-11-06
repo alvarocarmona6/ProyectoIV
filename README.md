@@ -23,17 +23,33 @@ Para ello voy a usar TDD donde consiste en ir haciendo pruebas o test donde esto
 
 # Despliegue
 
+El Pass elegido es Heroku ya que es facil de usar y la base de datos PostgreSQL es gratuita.
 En primer lugar instalamos [**Heroku CLI**](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) con el siguiente comando:
 
 ```bash
 $ wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 ```
 
-Luego nos damos de alta en la aplicación [**Heroku**](https://signup.heroku.com/?c=70130000001x9jEAAQ). Una vez reguistrado creamos nuestra app la mia se llama nbaivbot 
+Luego me doy de alta en la aplicación [**Heroku**](https://signup.heroku.com/?c=70130000001x9jEAAQ). Una vez reguistrado creamos nuestra app la mia se llama nbaivbot 
 
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/capturanbaivbot.png)
 
-Enlazamos nuestro repositorio GitHub con Heroku, y lo configuramos para que cuando hagamos un push en GitHub y haya pasado los test de TravisCI se despliegue automaticamente.
+Enlazo mi repositorio GitHub con Heroku, y lo configuro para que cuando haga un push en GitHub y haya pasado los test de TravisCI se despliegue automaticamente.
 
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/configuracionheroku.png)
+
+Para la base de datos he instalado  el addon de PostgreSQL que es gratuito.
+
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/basededatosheroku.png)
+
+A continuacion creo en el respositorio el archivo Procfile que contendrá información de lo que tiene que hacer Heroku para el despliegue,
+mi archivo Procfile es el [siguiente](https://github.com/alvarocarmona6/ProyectoIV/blob/master/Procfile).
+
+Despliegue https://nbaivbot.herokuapp.com/
+
+Mi bot ya tiene algunas funcionalidades hecha como mostrar la clasificación actualizada de la NBA o decir el mejor jugador. Se puede comprobar en telegram buscando @NBA_IV_Bot 
+
+
+
+
 
