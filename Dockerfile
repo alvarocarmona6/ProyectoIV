@@ -20,6 +20,6 @@ RUN apt-get update
 RUN apt-get install -y python3-pip
 RUN apt-get install -y git
 RUN git clone https://github.com/josegob/IV-Proyecto.git
-RUN cd ProyectoIV/ && pip3 install -r requirements.txt
+RUN cd ProyectoIV/ && pip install -r requirements.txt
 
 CMD cd ProyectoIV/bot && python3 NBAbot.py
