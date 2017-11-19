@@ -4,11 +4,11 @@ MAINTAINER Alvaro Carmona Oliva
 #Añadimos las variables de entorno
 ARG token_bot
 
-ARG database_db
+ARG database
 
 ENV TOKEN=$token_bot
 
-ENV DATABASE_URL=$database_db
+ENV DATABASE_URL=$database
 
 RUN apt-get update
 RUN apt-get install -y python-setuptools
