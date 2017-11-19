@@ -20,6 +20,6 @@ RUN apt-get update
 RUN apt-get install -y python-pip
 RUN apt-get install -y git
 RUN git clone https://github.com/josegob/IV-Proyecto.git
-RUN cd ProyectoIV/ && pip install -r requirements.txt
+RUN pip install -r ProyectoIV/requirements.txt
 
 CMD cd ProyectoIV/bot && python NBAbot.py
