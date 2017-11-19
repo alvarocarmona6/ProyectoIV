@@ -11,6 +11,7 @@ ENV TOKEN=$token_bot
 ENV DATABASE_URL=$database_db
 
 RUN apt-get -y update
+RUN apt-get install -y python-pip
 RUN pip install --upgrade
 #Primero de todo instalamos git y clonamos el directorio
 RUN apt-get install -y git
