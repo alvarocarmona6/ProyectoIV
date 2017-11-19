@@ -25,5 +25,5 @@ RUN git clone https://github.com/alvarocarmona6/ProyectoIV.git
 
 RUN pip install -r ProyectoIV/requirements.txt
 
-EXPOSE 8000
+EXPOSE 80
 CMD cd ProyectoIV/bot && python NBAbot.py
