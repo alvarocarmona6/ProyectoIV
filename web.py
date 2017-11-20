@@ -16,6 +16,10 @@ def principal():
     data = {"status": "OK"}
     return json.dumps(data)
 
+@app.route("/status")
+def docker():
+    data = {"status": "OK"}
+    return json.dumps(data)
 
 if __name__ == "__main__":
         port = int(os.environ.get('PORT', 5000))
