@@ -26,4 +26,6 @@ RUN git clone https://github.com/alvarocarmona6/ProyectoIV.git
 RUN pip install -r ProyectoIV/requirements.txt
 
 EXPOSE 80
-CMD cd ProyectoIV/bot && python NBAbot.py
+CMD gunicorn web.py --log-file - --bind 0.0.0.0:80
+CMD cd ProyectoIV/bot && python NBAbot.py 
+
