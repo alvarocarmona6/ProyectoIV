@@ -27,4 +27,4 @@ RUN pip install -r ProyectoIV/requirements.txt
 
 EXPOSE 80
 WORKDIR ProyectoIV/
-CMD ./script.sh
+CMD ./prueba.sh
