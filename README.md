@@ -50,6 +50,58 @@ Despliegue https://nbaivbot.herokuapp.com/
 Mi bot ya tiene algunas funcionalidades hecha como mostrar la clasificación actualizada de la NBA o decir el mejor jugador. Se puede comprobar en telegram buscando @NBA_IV_Bot 
 
 
+## Despliegue en Docker
+
+Lo primero que tenemos que hacer es registrarnos en la página de [Docker](https://www.docker.com/) e irnos al apartado de Create automated build, autorizando a Docker a que este conectado con nuestra cuenta.
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/capturadocker2.png)
+
+Ahora creamos el fichero Dockerfile para que así Docker pueda crear el contenedor
+
+		FROM ubuntu:16.04
+                MAINTAINER Alvaro Carmona Oliva
+
+                #Añadimos las variables de entorno
+                ARG token_bot
+
+                ARG database
+
+                ENV TOKEN=$token_bot
+
+                ENV DATABASE_URL=$database
+
+                RUN apt-get update
+                RUN apt-get install -y python-setuptools
+                RUN apt-get install -y python-dev
+                RUN apt-get install -y build-essential
+                RUN apt-get install -y libpq-dev
+                RUN apt-get install -y python-pip
+                RUN pip install --upgrade
+                RUN apt-get install net-tools
+
+                RUN apt-get install -y git
+                RUN git clone https://github.com/alvarocarmona6/ProyectoIV.git
+
+
+                RUN pip install -r ProyectoIV/requirements.txt
+
+                EXPOSE 80
+                WORKDIR ProyectoIV/
+                CMD ./prueba.sh
+
+
+Ahora al hacer pull Docker hará un build automático
+
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/capturadocker1.png)
+
+Una vez terminado se puede hacer pull del repositorio con docker alvaroc96/proyectoiv y ejecutarlo con sudo docker run -e "TOKEN=a" -e "DATABASE_URL=b" -i -t alvaroc96/proyectoiv
+
+
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/capturadocker3.png)
+
+Enlace del repositorio en Docker Hub: https://hub.docker.com/r/alvaroc96/proyectoiv/
+
+Para el despliegue en Zeit tenemos que instalar now con npm install -g now , posteriormente ejecuntando en el directorio donde esta el fichero Dockerfile  now -e "TOKEN=a" -e "DATABASE_URL=b" se desplegará automáticamente.
+Contenedor: https://proyectoiv-yrjpfrexfv.now.sh/
 
 
 
