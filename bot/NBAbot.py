@@ -12,8 +12,8 @@ bot = telebot.TeleBot(TOKEN)
 def listener(messages): 
 	for m in messages: 
         	if m.content_type == 'text': 
-			cid = m.chat.id 
-		    	print ("[" + str(cid) + "]: " + m.text) 
+                        cid = m.chat.id 
+                        print ("[" + str(cid) + "]: " + m.text) 
 
 bot.set_update_listener(listener)
 

@@ -1,7 +1,7 @@
 import funciones
 import unittest
 
-class Test(unittest.TestCase):
+class Comprobar(unittest.TestCase):
         
         def test_ComprobarClasificacionCorrecta(self): # Compruebo que los equipos estan entre 1 y 15 en la clasificacion
                 self.assertTrue(1 <= funciones.ObtenerClasificacionEquipo('Cavaliers') <= 15)
@@ -20,6 +20,9 @@ class Test(unittest.TestCase):
                 self.assertTrue( 0 <= funciones.ObtenerPuntosJugadores('Lebron') <= 1000)
                 self.assertTrue( 0 <= funciones.ObtenerPuntosJugadores('Harden') <= 1000)
 
+        def test_ComprobarClasificacion(self): #Compruebo que el mensaje que devuelve es mayor que 0
+                self.assertTrue(len(funciones.Clasificacion()) >0)
+
 if __name__ == '__main__':
         unittest.main()
-                
+             
