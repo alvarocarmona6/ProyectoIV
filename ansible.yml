@@ -2,10 +2,6 @@
 - hosts: nbabot
   user: ubuntu
   gather_facts: no
-  vars:
-   token_bot: "{{ lookup('env','token_bot') }}"
-   DATABASE_URL: "{{ lookup('env','DATABASE_URL')}}"
-
   pre_tasks:
   - name: Instalar Python
     become: yes
