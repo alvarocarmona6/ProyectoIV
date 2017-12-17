@@ -6,7 +6,7 @@ import funciones as fun
 import funcionesdatos as fundatos
 import os
 
-TOKEN ='420201411:AAGx5oYxByuVkOv2kwOpnUck0gTVSIKLCa4'
+TOKEN ='20201411:AAGu5Ij5rlHLHie5hSqzQCoYM78x-spEhXE'
 bot = telebot.TeleBot(TOKEN)
 
 def listener(messages): 
