@@ -114,7 +114,7 @@ Al final del archivo [VagrantFile](https://github.com/alvarocarmona6/ProyectoIV/
 Una vez que esto se ejecute podremos acceder mediante ssh con el comando ssh -i clave.pem ubuntu@DNS.
 
 ## Fabric
-Vamos a utilizar fabric para agilizar todo el proceso.Para eso tenemos nuestro fichero [fabric](https://github.com/alvarocarmona6/ProyectoIV/blob/master/fabfile.py). Para usarlo se ejecuta el siguiente comando fab  -i KEY.pem -H ubuntu@DNS funcion.
+Vamos a utilizar fabric para agilizar todo el proceso.Para eso tenemos nuestro fichero [fabric](https://github.com/alvarocarmona6/ProyectoIV/blob/master/despliegue/fabfile.py). Para usarlo se ejecuta el siguiente comando fab  -i KEY.pem -H ubuntu@DNS funcion.
 
 
 Despliegue final: 13.58.173.122
