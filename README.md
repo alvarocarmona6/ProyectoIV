@@ -104,4 +104,9 @@ Para el despliegue en Zeit tenemos que instalar now con npm install -g now , pos
 Contenedor: https://proyectoiv-yrjpfrexfv.now.sh/
 
 
+## Despliegue en AWS con Vagrant 
+Una vez que estemos registrado en la pagina de [amazon](https://aws.amazon.com/es/) y tengamos instalado virtual box y vagrant con sus correspondientes plugin para aws.
+Cuando tengamos todo esto instalado ejecutamos vagrant init en nuestro repositorio para que se cree el archivo [VagrantFile](https://github.com/alvarocarmona6/ProyectoIV/blob/master/Vagrantfile) el cual he tenido que modificar.
+
+
 
