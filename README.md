@@ -116,4 +116,7 @@ Una vez que esto se ejecute podremos acceder mediante ssh con el comando ssh -i 
 ## Fabric
 Vamos a utilizar fabric para agilizar todo el proceso.Para eso tenemos nuestro fichero [fabric](https://github.com/alvarocarmona6/ProyectoIV/blob/master/despliegue/fabfile.py). Para usarlo se ejecuta el siguiente comando fab  -i KEY.pem -H ubuntu@DNS funcion.
 Para el [script](https://github.com/alvarocarmona6/ProyectoIV/tree/master/provision) para agilizar todo.
+
+
+
 Despliegue final: 13.58.173.122
