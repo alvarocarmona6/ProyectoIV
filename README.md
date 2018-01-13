@@ -96,7 +96,6 @@ Ahora al hacer pull Docker hará un build automático
 Una vez terminado se puede hacer pull del repositorio con docker alvaroc96/proyectoiv y ejecutarlo con sudo docker run -e "TOKEN=a" -e "DATABASE_URL=b" -i -t alvaroc96/proyectoiv
 
 
-![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/capturadocker3.png)
 
 Enlace del repositorio en Docker Hub: https://hub.docker.com/r/alvaroc96/proyectoiv/
 
@@ -104,19 +103,3 @@ Para el despliegue en Zeit tenemos que instalar now con npm install -g now , pos
 Contenedor: https://proyectoiv-yrjpfrexfv.now.sh/
 
 
-## Despliegue en AWS con Vagrant 
-Una vez que estemos registrado en la pagina de [amazon](https://aws.amazon.com/es/) y tengamos instalado virtual box y vagrant con sus correspondientes plugin para aws.
-Cuando tengamos todo esto instalado ejecutamos vagrant init en nuestro repositorio para que se cree el archivo [VagrantFile](https://github.com/alvarocarmona6/ProyectoIV/blob/master/Vagrantfile) el cual he tenido que modificar.
-
-
-## Ansible
-Al final del archivo [VagrantFile](https://github.com/alvarocarmona6/ProyectoIV/blob/master/Vagrantfile) incluimos un archivo [Ansible](https://github.com/alvarocarmona6/ProyectoIV/blob/master/ansible.yml) que se va a encargar de aprovisionar nuestro Iass . 
-Una vez que esto se ejecute podremos acceder mediante ssh con el comando ssh -i clave.pem ubuntu@DNS.
-
-## Fabric
-Vamos a utilizar fabric para agilizar todo el proceso.Para eso tenemos nuestro fichero [fabric](https://github.com/alvarocarmona6/ProyectoIV/blob/master/despliegue/fabfile.py). Para usarlo se ejecuta el siguiente comando fab  -i KEY.pem -H ubuntu@DNS funcion.
-Para el [script](https://github.com/alvarocarmona6/ProyectoIV/tree/master/provision) para agilizar todo.
-
-
-
-Despliegue final: 13.58.173.122
