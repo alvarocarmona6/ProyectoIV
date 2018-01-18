@@ -107,8 +107,18 @@ Contenedor: https://proyectoiv-yrjpfrexfv.now.sh/
 
 Lo primero de todo es instalar Vagrant que  nos va permitir crear nuestra máquina virtual , yo ya lo tenia instalado de la asignatura DAI.
 Aun así con **sudo apt-get install vagrant** se instala sencillamente.
-Una vez instalado vagrant tenemos que tener una cuenta en Azure (yo la tengo desde el principio de curso ya que nuestro profesor nos dio un cupón). Seguidamente nos intalamos el plugin de azure en vagrant con **vagrant plugin install vagrant-azure**
+Una vez instalado vagrant tenemos que tener una cuenta en Azure (yo la tengo desde el principio de curso ya que nuestro profesor nos dio un cupón para canjear ). Seguidamente nos intalamos el plugin de azure en vagrant con **vagrant plugin install vagrant-azure**
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-1.png)
+
+Ahora con **sudo npm install -g azure-cli** nos instalamos el cliente de Azure en la terminal para asi poder hacer el correspondiente login y poder crear posteriormente la maquina virtual.
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-2.png)
+
+A partir de aqui ya podemos hacer login en la terminal con **azure login**
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-6.png)
+
+
+
+
 
 
 
