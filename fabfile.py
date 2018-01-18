@@ -7,9 +7,11 @@ def EliminarAplicacion():
         run('sudo rm -rf ./ProyectoIV')
 
 
-def InstalacionAplicacion():
+def InstalarAplicacion():
 
+        #Primero elimino la aplicacion si la hubiese
         EliminarAplicacion()
+        #Clono el repositorio
         run('git clone https://github.com/alvarocarmona6/ProyectoIV.git')
 
 
@@ -19,10 +21,10 @@ def InstalacionAplicacion():
         run('sudo apt-get install -y libpq-dev') #Postgre
         run('sudo apt-get install -y build-essential') #Requirements
         run('sudo apt-get install -y python-pip') #Pip
-        run('sudo pip install gunicorn') #gunicorn
+        run('sudo apt install gunicorn') #gunicorn
 
         #Dependencias
-        run('cd ./ProyectoIV && sudo pip install -r requirements.txt')
+        run('pip install -r ~/ProyectoIV/requirements.txt')
 
 
 
@@ -30,6 +32,9 @@ def InstalacionAplicacion():
 
 def Iniciar():
 
-        run('cd ./ProyectoIV && sudo sh prueba.sh', pty=False)
+        run('cd ./ProyectoIV &&  sudo gunicorn --config=config_gunicorn.py web:app -D', pty=False)
+        run('cd ./ProyectoIV &&  sudo python bot/NBAbot.py', pty=False)
+        
+        
         
         
