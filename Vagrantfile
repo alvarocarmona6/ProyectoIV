@@ -1,6 +1,6 @@
 Vagrant.configure('2') do |config|
   config.vm.box = 'azure'
-  config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box' #Caja base vacía
+  config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box' #Caja base vacia
   # use local ssh key to connect to remote vagrant box
   config.ssh.private_key_path = '~/.ssh/id_rsa'
   config.vm.network "public_network" 
