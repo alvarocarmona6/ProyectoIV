@@ -153,7 +153,7 @@ Una vez tengo todo esto ya puedo configurar mi fichero VagrantFile que está con
 
         end
 
-En el Vagrantfile he utilizado ansible  (se instala con **sudo apt-get install ansible**) en el fichero [var](https://github.com/alvarocarmona6/ProyectoIV/blob/master/var.yml) declaro la variable system_packages que contendra tanto build-essential como git para que el fichero [playbook](https://github.com/alvarocarmona6/ProyectoIV/blob/master/playbook.yml) con el task instala dichos paquetes para así automatizar el proceso ya que cuando cree la máquina virtual se intalará también esos dos paquetes.
+En el Vagrantfile he utilizado ansible  (se instala con **sudo apt-get install ansible**) en el fichero [var](https://github.com/alvarocarmona6/ProyectoIV/blob/master/var.yml) declaro la variable system_packages que contendra tanto build-essential como git para que el fichero [playbook](https://github.com/alvarocarmona6/ProyectoIV/blob/master/playbook.yml) con el task instala dichos paquetes para así automatizar el proceso ,ya que cuando cree la máquina virtual se intalará también esos dos paquetes.
 
 
 
