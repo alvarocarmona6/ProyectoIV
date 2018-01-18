@@ -121,6 +121,11 @@ Primero creo mi aplicación, en la pantalla de azure abajo a la izquierda en Má
 Como se ve en la captura yo ya tengo creada mi aplicacion que se llama **NBAbot**, una vez se tiene la aplicación hay que crear una certificado digital que para eso se puede usar openssl que ya sé de la asginatura SPSI con el comando **openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout clave.key -out clavea.key** y con el comando **openssl x509 -inform pem -in clave.key -outform der -out clave.cer** lo paso a formato cer, una vez lo tengo lo subo a través de la plataforma de Azure dentro de nuestra aplicación en el apartado de claves.
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-11.png) también genero una contraseña para la aplicación , cuando se guarda esta contraseña nos da una clave que deberemos guardar para después configurar el Vagrantfile.
 Una vez tengo todo esto ya puedo configurar mi fichero VagrantFile que está configurado de la siguiente manera:
+
+
+
+
+
         Vagrant.configure('2') do |config|
           config.vm.box = 'azure'
           config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box' #Caja base vacia
