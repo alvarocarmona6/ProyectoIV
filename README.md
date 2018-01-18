@@ -113,9 +113,13 @@ Una vez instalado vagrant tenemos que tener una cuenta en Azure (yo la tengo des
 Ahora con **sudo npm install -g azure-cli** nos instalamos el cliente de Azure en la terminal para asi poder hacer el correspondiente login y poder crear posteriormente la maquina virtual.
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-2.png)
 
-A partir de aqui ya podemos hacer login en la terminal con **azure login**
+A partir de aqui ya podemos hacer login en la terminal con **azure login** entrando en la pagina que aparece en la captura e insertando el codigo que nos muestra.
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-6.png)
-
+[Aquí](https://docs.microsoft.com/es-es/azure/) se puede encontrar todo para tener Azure bien configurado.
+Primero creo mi aplicación, en la pantalla de azure abajo a la izquierda en Más servicios->Registros de aplicaciones-> nuevo registro de aplicaciones.
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-10.png)
+Como se ve en la captura yo ya tengo creada mi aplicacion que se llama **NBAbot**, una vez se tiene la aplicación hay que crear una certificado digital que para eso se usa openssl que ya sé de la asginatura SPSI para crear una clave con el comando **openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout clave.key -out clavea.key** y con el comando **openssl x509 -inform pem -in azurevagrant.key -outform der -out azurevagrant.cer** lo pasamos a formato cer una vez lo tengo lo subo a través de la plataforma de Azure dentro de nuestra aplicación en el apartado de claves.
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-11.png) también genero una contraseña para la aplicación , cuando se guarda esta contraseña nos da una clave que deberemos guardar para después configurar el Vagrantfile.
 
 
 
