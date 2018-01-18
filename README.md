@@ -118,8 +118,35 @@ A partir de aqui ya podemos hacer login en la terminal con **azure login** entra
 [Aquí](https://docs.microsoft.com/es-es/azure/) se puede encontrar todo para tener Azure bien configurado.
 Primero creo mi aplicación, en la pantalla de azure abajo a la izquierda en Más servicios->Registros de aplicaciones-> nuevo registro de aplicaciones.
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-10.png)
-Como se ve en la captura yo ya tengo creada mi aplicacion que se llama **NBAbot**, una vez se tiene la aplicación hay que crear una certificado digital que para eso se puede usar openssl que ya sé de la asginatura SPSI con el comando **openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout clave.key -out clavea.key** y con el comando **openssl x509 -inform pem -in clave.key -outform der -out clave.cer** lo pasamos a formato cer una vez lo tengo lo subo a través de la plataforma de Azure dentro de nuestra aplicación en el apartado de claves.
+Como se ve en la captura yo ya tengo creada mi aplicacion que se llama **NBAbot**, una vez se tiene la aplicación hay que crear una certificado digital que para eso se puede usar openssl que ya sé de la asginatura SPSI con el comando **openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout clave.key -out clavea.key** y con el comando **openssl x509 -inform pem -in clave.key -outform der -out clave.cer** lo paso a formato cer, una vez lo tengo lo subo a través de la plataforma de Azure dentro de nuestra aplicación en el apartado de claves.
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-11.png) también genero una contraseña para la aplicación , cuando se guarda esta contraseña nos da una clave que deberemos guardar para después configurar el Vagrantfile.
+Una vez tengo todo esto ya puedo configurar mi fichero VagrantFile que está configurado de la siguiente manera:
+        Vagrant.configure('2') do |config|
+          config.vm.box = 'azure'
+          config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box' #Caja base vacia
+          # use local ssh key to connect to remote vagrant box
+          config.ssh.private_key_path = '~/.ssh/id_rsa'
+          config.vm.network "public_network" 
+          config.vm.network "forwarded_port", guest: 80, host: 80
+
+          config.vm.provider :azure do |azure, override|
+
+
+            # configuration needed for Azure
+            azure.vm_name = "maquinanbabot"
+            azure.tenant_id = 'id del directorio'
+            azure.client_id = 'id de la aplicacion'
+            azure.client_secret = 'contraseña de la aplicacion'
+            azure.subscription_id = 'id de la suscripciones'
+            azure.vm_size = "Standard_DS2_v2"
+          end
+
+          # configuration of ansible
+          config.vm.provision :ansible do |ansible|
+                ansible.playbook = "playbook.yml"
+          end
+
+        end
 
 
 
