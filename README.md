@@ -106,7 +106,11 @@ Contenedor: https://proyectoiv-yrjpfrexfv.now.sh/
 ## Despliegue en Azure
 
 Lo primero de todo es instalar Vagrant que  nos va permitir crear nuestra máquina virtual , yo ya lo tenia instalado de la asignatura DAI.
-aun así con **sudo apt-get install vagrant** se instala sencillamente.
+Aun así con **sudo apt-get install vagrant** se instala sencillamente.
+Una vez instalado vagrant tenemos que tener una cuenta en Azure (yo la tengo desde el principio de curso ya que nuestro profesor nos dio un cupón). Seguidamente nos intalamos el plugin de azure en vagrant con **vagrant plugin install vagrant-azure**
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-1.png)
+
+
 
 
 
