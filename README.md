@@ -155,10 +155,19 @@ Una vez tengo todo esto ya puedo configurar mi fichero VagrantFile que está con
 
 En el Vagrantfile he utilizado ansible  (se instala con **sudo apt-get install ansible**) en el fichero [var](https://github.com/alvarocarmona6/ProyectoIV/blob/master/var.yml) declaro la variable system_packages que contendra tanto build-essential como git para que el fichero [playbook](https://github.com/alvarocarmona6/ProyectoIV/blob/master/playbook.yml) con el task instala dichos paquetes para así automatizar el proceso ,ya que cuando cree la máquina virtual se intalará también esos dos paquetes.
 
-Antes de crear la maquina virtual tenemos que darle permiso a la aplicacion de colaborador de la siguiente manera:
+Antes de crear la maquina virtual tengo que darle permiso a la aplicacion de colaborador de la siguiente manera:
 
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-12.png)
 
 
-Una vez hecho esto creamos la maquina virtual con **vagrant up --provider=azure**
+Una vez hecho esto creo la maquina virtual con **vagrant up --provider=azure**
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-8.png)
+
+Ya tengo la maquina virtual creada con el nombre que le puse en el fichero Vagrantfile con azure.vm_name (maquinanbabot)
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-13.png)
+
+Ahora abro el tanto el puerto 80 como el puerto 8080 de mi maquina virtual (maquinavirtual->configuracion->redes) dejando su configuracion de la siguiente manera:
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-14.png)
+
+
+
