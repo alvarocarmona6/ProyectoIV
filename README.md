@@ -178,6 +178,11 @@ Para el despliegue he usado fabric y me he creado mi fichero [fabfile](https://g
 Por ultimo tengo la funcion Iniciar que inicia tanto el servicio web como el bot.
 
 Para usarlo se escribe el siguiente comando **sudo fab -H vagrant@maquinanbabot.westus.cloudapp.azure.com InstalarAplicacion** así ya tendriamos el directorio con mi repositorio clonado y las herramientas instaladas y  **sudo fab -H vagrant@maquinanbabot.westus.cloudapp.azure.com Iniciar** para iniciar la aplicacion.
+
+
+
 Despliegue final:maquinanbabot.westus.cloudapp.azure.com
+
+
 
 
