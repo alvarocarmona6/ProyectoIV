@@ -161,4 +161,4 @@ Antes de crear la maquina virtual tenemos que darle permiso a la aplicacion de c
 
 
 Una vez hecho esto creamos la maquina virtual con **vagrant up --provider=azure**
-![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-6.png)
+![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-8.png)
