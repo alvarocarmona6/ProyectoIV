@@ -1,3 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+puts ENV["TENANT_ID"]
+puts ENV["SUBSCRIPTION_ID"]
+puts ENV["CLIENT_ID"]
+puts ENV["CLIENT_SECRET"]
+
+
+
 Vagrant.configure('2') do |config|
   config.vm.box = 'azure'
   config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box' #Caja base vacia
@@ -11,10 +21,10 @@ Vagrant.configure('2') do |config|
 
     # configuration needed for Azure
     azure.vm_name = "maquinanbabot"
-    azure.tenant_id = 'ae6fb5a9-e051-4e1c-8033-2130e7dced5e'
-    azure.client_id = '31d93005-bde3-46bb-b05f-54cc952f258f'
-    azure.client_secret = '2cQEwlkRYmWmVLKVEr6hoEGNi27QWs2kARf8GYKIKBs='
-    azure.subscription_id = 'e3ab5955-e0f4-4343-b68f-09a462dd43d7'
+    azure.tenant_id =  ENV["TENANT_ID"]
+    azure.client_id = ENV["CLIENT_ID"]
+    azure.client_secret = ENV["CLIENT_SECRET"]
+    azure.subscription_id = ENV["SUBSCRIPTION_ID"]
     azure.vm_size = "Standard_DS2_v2"
   end
 
