@@ -177,4 +177,7 @@ Ahora abro el tanto el puerto 80 como el puerto 8080 de mi maquina virtual (maqu
 Para el despliegue he usado fabric y me he creado mi fichero [fabfile](https://github.com/alvarocarmona6/ProyectoIV/blob/master/despliegue/fabfile.py) donde tengo 3 funciones, EliminarAplicacion que elimina el directorio donde creo esa aplicacion , InstalarAplicacion que primero elimina el directorio (si lo hubiese) despúes clona mi repositorio github y por ultimo instala las herramientas y las dependencias.
 Por ultimo tengo la funcion Iniciar que inicia tanto el servicio web como el bot.
 
+Para usarlo se escribe el siguiente comando **sudo fab -H vagrant@maquinanbabot.westus.cloudapp.azure.com InstalarAplicacion** así ya tendriamos el directorio con mi repositorio clonado y las herramientas instaladas y  **sudo fab -H vagrant@maquinanbabot.westus.cloudapp.azure.com Iniciar** para iniciar la aplicacion.
+Despliegue final:maquinanbabot.westus.cloudapp.azure.com
+
 
