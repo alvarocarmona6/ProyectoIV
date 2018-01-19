@@ -167,6 +167,8 @@ Ya tengo la maquina virtual creada con el nombre que le puse en el fichero Vagra
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-13.png)
 
 Ahora abro el tanto el puerto 80 como el puerto 8080 de mi maquina virtual (maquinavirtual->configuracion->redes) dejando su configuracion de la siguiente manera:
+
+
 ![imagen](https://github.com/alvarocarmona6/ProyectoIV/blob/master/capturas/hito5-14.png)
 
 
