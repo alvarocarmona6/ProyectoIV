@@ -181,7 +181,7 @@ Para usarlo se escribe el siguiente comando **sudo fab -H vagrant@maquinanbabot.
 
 
 
-Despliegue final:maquinanbabot.westus.cloudapp.azure.com
+Despliegue final: maquinanbabot.westus.cloudapp.azure.com
 
 
 
